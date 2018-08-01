@@ -1,0 +1,13 @@
+#left{
+    width:70%;
+    overflow: hidden;
+    float:left;
+    margin-right:10px;
+}
+
+#right{
+
+    width: 27%;
+    overflow: hidden;
+    float: left;
+}

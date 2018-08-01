@@ -3,16 +3,40 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
-
+import { MenubarComponent } from './menubar/menubar.component';
+import { HomeComponent } from './routes/home/home.component';
+import { CourseComponent } from './routes/course/course.component';
+import { ReviewsComponent } from './routes/reviews/reviews.component';
+import { OfficesComponent } from './routes/offices/offices.component';
+import { OffersComponent } from './routes/offers/offers.component';
+import { VirtualclassComponent } from './routes/virtualclass/virtualclass.component';
+import { Routemod } from './app.route';
+import { SlideareaComponent } from './slidearea/slidearea.component';
+import { EnquiryComponent } from './enquiry/enquiry.component';
+import { MainareaComponent } from './mainarea/mainarea.component';
+import { CourselistComponent } from './routes/home/courselist/courselist.component';
+import { CoursedetailComponent } from './routes/home/coursedetail/coursedetail.component';
+import { CourseService } from './services/course.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenubarComponent,
+    HomeComponent,
+    CourseComponent,
+    ReviewsComponent,
+    OfficesComponent,
+    OffersComponent,
+    VirtualclassComponent,
+    SlideareaComponent,
+    EnquiryComponent,
+    MainareaComponent,
+    CourselistComponent,
+    CoursedetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,Routemod
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,7 @@
+.slideshow{
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    padding:30px;
+    border: 2px  dashed blue;
+}
