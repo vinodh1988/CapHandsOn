@@ -1,7 +1,15 @@
 .enquiry{
-  min-height: 350px;
+  min-height: 450px;
   width: 100%;
   padding: 10px;
   border: 2px dashed lightslategray;
 
+}
+
+.errors{
+  border: 2px solid darkblue;
+  color:  darkblue;
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
 }

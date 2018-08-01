@@ -1,0 +1,26 @@
+.review{
+    width: 80%;
+    min-height: 180px;
+    background-color: rgba(16, 62, 153, 0.685);
+    padding: 10px;
+    margin: 10px;
+}
+
+h3{
+    font-family: arial;
+    font-style: italic;
+    color: wheat;
+}
+
+p{
+    color: #ccc6c6;
+    padding: 10px;
+    font-size: 22px;
+    font-family: agency FB;
+}
+
+h5{
+    text-align: right;
+    font-family: Courier New, Courier, monospace;
+    color: white;
+}

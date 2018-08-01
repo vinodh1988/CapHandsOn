@@ -22,6 +22,10 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/Offices">Our Offices</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="[{ outlets: { sidebar: ['Schedules'] } }]">
+          Schedules</a>
+    </li>
   </ul>
 </nav>
 

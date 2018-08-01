@@ -1,5 +1,34 @@
-<div class="enquiry">
+<div class="enquiry" *ngIf="!sending">
 
-    <h1>Enquiry form will come here</h1>
+    <div class="form-group">
+    <label for="name">
+        Name
+    </label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="name">
+   </div>
+   <div class="form-group">
+    <label for="email">
+            Email
+        </label>
+    <input type="text" class="form-control" name="email" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+    <label for="message">
+           Message
+        </label>
+    <textarea class="form-control" name="name" [(ngModel)]="message"
+   rows=6></textarea>
+   </div>
+    <button (click)="sendEnquiry()" class="btn btn-primary">Post Enquiry</button>
 
+    <div class="errors" *ngIf="hasErrors">
+        <ul><li *ngFor="let n of errors">{{n}}</li></ul>
+    </div>
+
+</div>
+
+<div class="enquiry" *ngIf="sending">
+
+       <img src="../../assets/images/{{imagename}}" height="300" width="300" 
+       [style.padding]="'30px'">
 </div>

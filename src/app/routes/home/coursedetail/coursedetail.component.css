@@ -1,7 +1,7 @@
 .course{
     float: left;
     width: 225px;
-    height: 280px;
+    height: 300px;
     box-sizing: border-box;
     margin: 20px;
     background-color: rgb(235, 240, 250);
@@ -27,6 +27,7 @@ h5{
     font-family: consolas;
     color: darkred;;
     text-align: center;
+    font-size: 15px;
 }
 h6{
     color: gray;

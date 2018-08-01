@@ -9,7 +9,7 @@ import {course} from '../../../types/course';
 export class CourselistComponent implements OnInit {
 
   courselist:course[];
-  
+  pricerange:string="All Courses";
   constructor(private cs:CourseService) { 
 
     
