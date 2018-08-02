@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
+import {HttpClientModule,HttpClient} from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './menubar/menubar.component';
@@ -26,7 +29,17 @@ import { ReviewComponent } from './routes/reviews/review/review.component';
 import {ReviewService} from './services/review.service';
 import {EnquiryService} from './services/enquiry.service';
 import { CurrentComponent } from './routes/course/current/current.component';
-import { ScheduleComponent } from './routes/course/schedule/schedule.component'
+import { ScheduleComponent } from './routes/course/schedule/schedule.component';
+import { ServiceComponent } from './service/service.component';
+import { TopicsearchComponent } from './routes/course/topicsearch/topicsearch.component'
+
+import {TopicService} from './topic.service';
+import { HighlightDirective } from './directives/highlight.directive';
+import { BannerDirective } from './directives/banner.directive';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -48,12 +61,23 @@ import { ScheduleComponent } from './routes/course/schedule/schedule.component'
     FiltercoursePipe,
     ReviewComponent,
     CurrentComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ServiceComponent,
+    TopicsearchComponent,
+    HighlightDirective,
+    BannerDirective
   ],
   imports: [
-    BrowserModule,Routemod,FormsModule,HttpClientModule
+    BrowserModule,Routemod,FormsModule,ReactiveFormsModule,
+    HttpClientModule,TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+      }
+  })
   ],
-  providers: [CourseService,ReviewService,EnquiryService],
+  providers: [CourseService,ReviewService,EnquiryService,TopicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

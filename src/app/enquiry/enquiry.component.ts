@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EnquiryService } from '../services/enquiry.service';
-import { setTimeout } from 'timers';
 
 
 @Component({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EnquiryService } from './services/enquiry.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  time:number=5;
+  offermessage:string;
+  constructor(private es:EnquiryService){
+     this.offermessage=es.getOfferMessage();
+  }
 }

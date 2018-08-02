@@ -1,0 +1,6 @@
+Search a Topic <input type="text" [(ngModel)]="topic" 
+(keyup)="changeText()">
+<hr>
+<ul>
+  <li *ngFor="let n of topics">{{n.topic}}</li>
+</ul>

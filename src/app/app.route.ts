@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import {ScheduleComponent} from "./routes/course/schedule/schedule.component";	
 import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { CurrentComponent } from './routes/course/current/current.component';
+import { TopicsearchComponent } from './routes/course/topicsearch/topicsearch.component';
 const routes=[
     {path:"",component:HomeComponent},
     {path:"Courses",component:CourseComponent},
@@ -17,7 +18,8 @@ const routes=[
     {path:"Offers",component: OffersComponent},
     {path:"VirtualClass",component:VirtualclassComponent},
     {path:"CDetails/:ccode",component:CurrentComponent},
-    {path:"Schedules",component:ScheduleComponent,outlet:"sidebar"}
+    {path:"Schedules",component:ScheduleComponent,outlet:"sidebar"},
+    {path:"CourseSearch",component:TopicsearchComponent,outlet:"search"}
 ];
 
 export const Routemod:ModuleWithProviders=RouterModule.forRoot(routes);
